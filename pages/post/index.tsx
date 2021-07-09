@@ -2,7 +2,6 @@ import { NextPage } from 'next';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
-import './styles.css';
 
 import { ContentfulService } from '../../core/contentful';
 

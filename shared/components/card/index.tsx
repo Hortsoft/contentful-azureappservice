@@ -22,7 +22,7 @@ const Card: FunctionComponent<Props> = ({ info }) => {
   };
 
   return (
-    <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+    
     <div className={styles.card}>
       <div className={styles.card__header} style={cardBGStyles} />
       <div className={styles.card__body}>
@@ -36,7 +36,7 @@ const Card: FunctionComponent<Props> = ({ info }) => {
         </Link>
       </div>
     </div>
-    </div>
+    
   );
 };
 

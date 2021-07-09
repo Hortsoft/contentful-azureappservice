@@ -51,11 +51,10 @@ const IndexPage: NextPage<Props, any> = (props: Props) => {
       <Layout metaTags={defaultMetaTags}>
          <Navbar />
          <div className="container">
-         
+              <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
           <div className="blogposts">
             <h1 className="blogposts__header">Latest posts</h1>
-            <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-              <div className="cards-deck">{cards(entries)}</div>
+               <div className="cards-deck">{cards(entries)}</div>
             </div>
           </div>
           <div className="sidenav">

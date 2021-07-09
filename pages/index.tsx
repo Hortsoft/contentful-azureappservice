@@ -5,7 +5,7 @@ import {useRouter} from 'next/router'
 import {ContentfulService} from '../core/contentful';
 import { defaultMetaTags } from '../core/constants';
 import {BlogPost} from '../interfaces/post';
-
+import { Navbar } from '../shared/components/navbar';
 import Layout from '../shared/components/layout/layout.component';
 import Card from '../shared/components/card';
 import Paginator from '../shared/components/paginator';
@@ -49,7 +49,9 @@ const IndexPage: NextPage<Props, any> = (props: Props) => {
   
     return (
       <Layout metaTags={defaultMetaTags}>
-        <div className="container">
+         <Navbar />
+         <div className="container">
+         
           <div className="blogposts">
             <h1 className="blogposts__header">Latest posts</h1>
             <div className="cards-deck">{cards(entries)}</div>

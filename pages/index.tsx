@@ -10,7 +10,7 @@ import Layout from '../shared/components/layout/layout.component';
 import Card from '../shared/components/card';
 import Paginator from '../shared/components/paginator';
 import TagFilters from "../shared/components/tag-filters/tag-filters";
-
+import { Footer } from '../shared/components/footer';
 const calculateRange = (length) => Array.from({length}, (v, k) => k + 1);
 
 const cards = (entries) => entries.map((entry, index) => (<Card info={entry} key={index}/>));

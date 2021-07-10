@@ -9,7 +9,7 @@ import Layout from '../../shared/components/layout/layout.component';
 import { MetaTags, PageType, RobotsContent } from "../../interfaces/tags";
 import { BlogPost } from '../../interfaces/post';
 import Card from "../../shared/components/card";
-import { Footer } from '../shared/components/footer';
+import { Footer } from '../../shared/components/footer';
 
 type Props = {
     article: BlogPost;

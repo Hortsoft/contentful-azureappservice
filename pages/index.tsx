@@ -72,6 +72,7 @@ const IndexPage: NextPage<Props, any> = (props: Props) => {
             />
           </div>
         </div>
+        <Footer />
       </Layout>
     );
   };

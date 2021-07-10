@@ -4,12 +4,12 @@ import ReactMarkdown from 'react-markdown';
 
 
 import { ContentfulService } from '../../core/contentful';
-
+import { Navbar } from '../shared/components/navbar';
 import Layout from '../../shared/components/layout/layout.component';
 import { MetaTags, PageType, RobotsContent } from "../../interfaces/tags";
 import { BlogPost } from '../../interfaces/post';
 import Card from "../../shared/components/card";
-
+import { Footer } from '../shared/components/footer';
 
 type Props = {
     article: BlogPost;
@@ -33,6 +33,7 @@ type Props = {
   
     return (
       <Layout metaTags={postMetaTags}>
+         <Navbar />
         <div className="post-container" id="post-container">
           <div className="post-header">
             <h1>{props.article.title}</h1>
@@ -46,6 +47,7 @@ type Props = {
       
         </div>
         <div className="suggestions">{renderCards(props.suggestedArticles)}</div>
+        <Footer />
       </Layout>
     );
   };

@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 
 
 import { ContentfulService } from '../../core/contentful';
-import { Navbar } from '../shared/components/navbar';
+import { Navbar } from '../../shared/components/navbar';
 import Layout from '../../shared/components/layout/layout.component';
 import { MetaTags, PageType, RobotsContent } from "../../interfaces/tags";
 import { BlogPost } from '../../interfaces/post';

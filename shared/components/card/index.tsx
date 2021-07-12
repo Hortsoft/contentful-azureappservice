@@ -22,6 +22,7 @@ const Card: FunctionComponent<Props> = ({ info }) => {
   };
 
   return (
+    
     <div className={styles.card}>
       <div className={styles.card__header} style={cardBGStyles} />
       <div className={styles.card__body}>
@@ -35,6 +36,7 @@ const Card: FunctionComponent<Props> = ({ info }) => {
         </Link>
       </div>
     </div>
+    
   );
 };
 

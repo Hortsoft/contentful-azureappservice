@@ -5,12 +5,12 @@ import {useRouter} from 'next/router'
 import {ContentfulService} from '../core/contentful';
 import { defaultMetaTags } from '../core/constants';
 import {BlogPost} from '../interfaces/post';
-
+import { Navbar } from '../shared/components/navbar';
 import Layout from '../shared/components/layout/layout.component';
 import Card from '../shared/components/card';
 import Paginator from '../shared/components/paginator';
 import TagFilters from "../shared/components/tag-filters/tag-filters";
-
+import { Footer } from '../shared/components/footer';
 const calculateRange = (length) => Array.from({length}, (v, k) => k + 1);
 
 const cards = (entries) => entries.map((entry, index) => (<Card info={entry} key={index}/>));
@@ -49,10 +49,13 @@ const IndexPage: NextPage<Props, any> = (props: Props) => {
   
     return (
       <Layout metaTags={defaultMetaTags}>
-        <div className="container">
+         <Navbar />
+         <div className="container">
+              <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
           <div className="blogposts">
             <h1 className="blogposts__header">Latest posts</h1>
-            <div className="cards-deck">{cards(entries)}</div>
+               <div className="cards-deck">{cards(entries)}</div>
+            </div>
           </div>
           <div className="sidenav">
             <TagFilters
@@ -69,6 +72,7 @@ const IndexPage: NextPage<Props, any> = (props: Props) => {
             />
           </div>
         </div>
+        <Footer />
       </Layout>
     );
   };

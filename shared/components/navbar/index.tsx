@@ -5,7 +5,7 @@ import { getHref, getNavigationLink } from '../../helpers/helper';
 export const Navbar = () => {
     return (
       <>
-        <div className="bg-gray-100 font-sans w-full min-height : 200px m-0">
+        <div className="bg-orange-100 font-sans w-full min-height : 200px m-0">
 	<div className="bg-orange-400 shadow">
     <div className="container mx-auto px-4">
       <div className="flex items-center justify-between py-4">

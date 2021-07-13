@@ -11,6 +11,7 @@
     "populate:contentful": "contentful space migration --space-id '8s27tytzwtrj' utils/contentful.js --yes"
   },
   "dependencies": {
+    "@headlessui/react": "^1.3.0",
     "@zeit/next-css": "^1.0.1",
     "contentful": "^8.4.2",
     "dotenv-webpack": "^7.0.3",

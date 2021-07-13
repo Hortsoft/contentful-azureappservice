@@ -4,13 +4,11 @@ import Link from 'next/link';
 
   const HeroSection = () => (
     <Jumbotron className="text-white bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500">
-      <h1 className="text-2xl md:text-4xl mb-3">Kimia-UI Tutorial</h1>
+      <h1 className="text-2xl md:text-4xl mb-3">Jumbotron</h1>
       <p className="mb-3">
-        Kimia-ui is a collection of React components built with tailwindcss and
-        fully customizable that allows you to be more productive
+        What shallwe say. Gradient
       </p>
-      <p>This is some text.</p>
-      <p>This is another text.</p>
+      
       <button className="text-sm px-6 py-1 mt-4 text-white active:bg-yellow-500 focus:outline-none border-solid border">
         Learn more
       </button>

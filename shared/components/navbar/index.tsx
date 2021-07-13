@@ -1,8 +1,12 @@
 import { useState } from "react";
 import Link from "next/link";
 
- const Navbar = () => {
-  const [showNav, setShowNav] = useState(false);
+ 
+
+export const Navbar = () => {
+
+const [showNav, setShowNav] = useState(false);
+  
 
     return (
       <>
@@ -60,4 +64,3 @@ import Link from "next/link";
       </>
     );
   };
-  export default Navbar;

@@ -1,66 +1,50 @@
-import { useState } from "react";
-import Link from "next/link";
-
- 
+import React, { FunctionComponent } from 'react';
+import Link from 'next/link';
+import { getHref, getNavigationLink } from '../../helpers/helper';
 
 export const Navbar = () => {
-
-const [showNav, setShowNav] = useState(false);
-  
-
     return (
       <>
-     <nav className='flex items-center flex-wrap bg-white-400 p-3 '>
-     <div
-        id="logo"
-        className="lg:text-xl p-2 mr-4 inline-flex items-center font-serif font-bold"
-      >
-        <Link href="/">
-          <a>NextJS with Tailwind</a>
-        </Link>
-      </div>
-      <button
-        onClick={() => setShowNav(!showNav)}
-        type="button"
-        className="inline-flex p-3 text-white hover:text-gray-300 focus:text-white focus:outline-none lg:hidden ml-auto"
-      >
-        <svg
-          className="h-6 w-6 fill-current"
-          viewBox="0 -53 384 384"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0" />
-          <path d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0" />
-          <path d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0" />
-        </svg>
-      </button>
+        <div className="bg-orange-600 font-sans w-full min-height : 200px m-0">
+	<div className="bg-orange-400 shadow">
+    <div className="container mx-auto px-4">
+      <div className="flex items-center justify-between py-4">
+        <div>
+         
+        </div>
 
-      <div className="w-full flex-grow lg:inline-flex lg:flex-grow lg:w-auto">
-        <div
-          className={
-            "lg:inline-flex lg:flex-row lg:ml-auto flex flex-col " +
-            (showNav ? "" : "hidden")
-          }
-        >
-          <Link href="/">
-            <a className="lg:inline-flex lg:w-auto px-3 py-2 rounded hover:bg-blue-800 hover:bg-gray-900">
-              Home
-            </a>
-          </Link>
+        <div className="hidden sm:flex sm:items-center">
+          <a href="#" className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4">Program</a>
+          <a href="#" className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4">Community</a>
+          <a href="#" className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4">Partnerships</a>
+          <a href="#" className="text-gray-800 text-sm font-semibold hover:text-purple-600">Pricing</a>
+        </div>
 
-          <Link href="/about">
-            <a className="lg:inline-flex lg:w-auto px-3 py-2 rounded hover:bg-blue-800 hover:bg-gray-900">
-              About
-            </a>
-          </Link>
-          <Link href="/contact">
-            <a className="lg:inline-flex lg:w-auto px-3 py-2 rounded hover:bg-blue-800 hover:bg-gray-900">
-              Contact Us
-            </a>
-          </Link>
+        <div className="hidden sm:flex sm:items-center">
+          <a href="#" className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4">Sign in</a>
+          <a href="#" className="text-gray-800 text-sm font-semibold border px-4 py-2 rounded-lg hover:text-purple-600 hover:border-purple-600">Sign up</a>
+        </div>
+
+        <div className="sm:hidden cursor-pointer">
+        
         </div>
       </div>
-      </nav>
+      
+      <div className="block sm:hidden bg-white border-t-2 py-2">
+        <div className="flex flex-col">
+          <a href="#" className="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1">Products</a>
+          <a href="#" className="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1">Marketplace</a>
+          <a href="#" className="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1">Partners</a>
+          <a href="#" className="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1">Pricing</a>
+          <div className="flex justify-between items-center border-t-2 pt-2">
+            <a href="#" className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4">Sign in</a>
+            <a href="#" className="text-gray-800 text-sm font-semibold border px-4 py-1 rounded-lg hover:text-purple-600 hover:border-purple-600">Sign up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
       </>
     );
   };

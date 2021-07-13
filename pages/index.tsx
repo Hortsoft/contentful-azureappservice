@@ -5,7 +5,7 @@ import {useRouter} from 'next/router'
 import {ContentfulService} from '../core/contentful';
 import { defaultMetaTags } from '../core/constants';
 import {BlogPost} from '../interfaces/post';
-import Navbar from '../shared/components/navbar';
+import {Navbar} from '../shared/components/navbar';
 import Layout from '../shared/components/layout/layout.component';
 import HeroSection from '../shared/components/herosection'; 
 import Card from '../shared/components/card';

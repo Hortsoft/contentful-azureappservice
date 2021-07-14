@@ -1,27 +1,26 @@
-import React, { FunctionComponent } from 'react';
+import React from 'react';
 import Link from 'next/link';
  
 
   const HeroSection = () => (
-    <Jumbotron className="text-white bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500">
-      <h1 className="text-2xl md:text-4xl mb-3">Jumbotron</h1>
-      <p className="mb-3">
-        What shallwe say. Gradient
-      </p>
-      
-      <button className="text-sm px-6 py-1 mt-4 text-white active:bg-yellow-500 focus:outline-none border-solid border">
-        Learn more
-      </button>
-    </Jumbotron>
+      <div>
+        <div className="jumbotron shadow-2xl  text-white bg-gradient-to-r from-green-400 via-yellow-500 to-orange-700 py-12 mt-4">
+            <h1 className="text-3xl leading-9 font-bold tracking-tight text-white sm:text-4xl sm:leading-10 justify-center">
+                Jumbotron
+                </h1>
+            <div className="mt-8 flex justify-center">
+                <p className="m-4">
+                    What shall we say. Gradient
+                </p>
+
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Learn more
+                </button> 
+            </div>
+        </div>
+        </div>
+    
   );
-  function Jumbotron({ children, className }) {
-    return (
-      <div
-        className={`${className} shadow-lg border font-light border-solid rounded-sm py-12 px-8 mb-8`}
-      >
-        {children}
-      </div>
-    );
-  }
+   
   
   export default HeroSection;

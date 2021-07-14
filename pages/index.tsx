@@ -7,7 +7,7 @@ import { defaultMetaTags } from '../core/constants';
 import {BlogPost} from '../interfaces/post';
 import {Navbar} from '../shared/components/navbar';
 import Layout from '../shared/components/layout/layout.component';
-
+import HeroSection from '../shared/components/herosection';
 import Card from '../shared/components/card';
 import Paginator from '../shared/components/paginator';
 import TagFilters from "../shared/components/tag-filters/tag-filters";
@@ -51,8 +51,9 @@ const IndexPage: NextPage<Props, any> = (props: Props) => {
     return (
       <Layout metaTags={defaultMetaTags}>
          <Navbar />
-       
+         <HeroSection />
          <div className="container">
+         
               <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
           <div className="blogposts">
             <h1 className="blogposts__header">Latest posts</h1>

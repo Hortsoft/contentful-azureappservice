@@ -61,7 +61,7 @@ const IndexPage: NextPage<Props, any> = (props: Props) => {
           </div>
           <div className="sidenav">
             <TagFilters
-              tags={tags}
+              tags={tags}]
               updatePage={handleTagChosen}
               selectedTagId={tag}
             />

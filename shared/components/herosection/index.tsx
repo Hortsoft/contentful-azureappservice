@@ -3,6 +3,7 @@ import Link from 'next/link';
  
 
   const HeroSection = () => (
+    <div className="container">
     <Jumbotron className="text-white bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500">
       <h1 className="text-2xl md:text-4xl mb-3">Jumbotron</h1>
       <p className="mb-3">
@@ -13,6 +14,7 @@ import Link from 'next/link';
         Learn more
       </button>
     </Jumbotron>
+    </div>
   );
   function Jumbotron({ children, className }) {
     return (

@@ -4,14 +4,17 @@ import Link from 'next/link';
 
   const HeroSection = () => (
       <div>
-        <div className="jumbotron text-white bg-gradient-to-r from-green-400 via-yellow-500 to-orange-700">
-            <h1 className="text-2xl md:text-4xl mb-3">Jumbotron</h1>
-        <p className="mb-3">
-            What shallwe say. Gradient
-        </p>
-        <button className="text-sm px-6 py-1 mt-4 text-white active:bg-yellow-500 focus:outline-none border-solid border">
-        Learn more
-        </button>
+        <div className="jumbotron text-white bg-gradient-to-r from-green-400 via-yellow-500 to-orange-700 m-4">
+            <h1 className="text-3xl leading-9 font-bold tracking-tight text-white sm:text-4xl sm:leading-10">Jumbotron</h1>
+            <div className="mt-8 flex justify-center">
+                <p className="m-4">
+                    What shallwe say. Gradient
+                </p>
+
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Learn more
+                </button> 
+            </div>
         </div>
         </div>
     

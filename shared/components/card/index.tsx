@@ -22,9 +22,7 @@ const Card: FunctionComponent<Props> = ({ info }) => {
   };
 
   return (
-    <div className="flex items-center min-h-screen bg-gray-200 text-gray-800">
-      <div className="p-4 w-full">
-        <div className="grid grid-cols-12 gap-4">
+ 
           <div className="col-span-12 sm:col-span-6 md:col-span-3">
             <div className="flex flex-row bg-white shadow-sm rounded p-4">
             <div className="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-blue-100 text-blue-500">
@@ -42,9 +40,7 @@ const Card: FunctionComponent<Props> = ({ info }) => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+   
   );
 };
 

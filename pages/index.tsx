@@ -53,11 +53,10 @@ const IndexPage: NextPage<Props, any> = (props: Props) => {
          <Navbar />
          <HeroSection />
          <div className="container">
-         
-              <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+         <div className="p-10 grid grid-cols-12 gap-5">
           <div className="blogposts">
             <h1 className="blogposts__header">Latest posts</h1>
-               <div className="cards-deck">{cards(entries)}</div>
+               <div className="">{cards(entries)}</div>
             </div>
           </div>
           <div className="sidenav">

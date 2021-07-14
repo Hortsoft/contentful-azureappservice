@@ -22,21 +22,27 @@ const Card: FunctionComponent<Props> = ({ info }) => {
   };
 
   return (
-    
-    <div className={styles.card}>
-      <div className={styles.card__header} style={cardBGStyles} />
-      <div className={styles.card__body}>
-        <h3 className={styles.card__title}>{info.title}</h3>
-        <p className={styles.card__text}>{info.description}</p>
-      </div>
+    <div className="flex items-center min-h-screen bg-gray-200 text-gray-800">
+      <div className="p-4 w-full">
+        <div className="grid grid-cols-12 gap-4">
+          <div className="col-span-12 sm:col-span-6 md:col-span-3">
+            <div className={styles.card}>
+              <div className={styles.card__header} style={cardBGStyles} />
+              <div className={styles.card__body}>
+                <h3 className={styles.card__title}>{info.title}</h3>
+                <p className={styles.card__text}>{info.description}</p>
+              </div>
 
-      <div className={styles.card__footer}>
-        <Link href={getHref()} as={getNavigationLink(info.slug)}>
-          <a className={styles.card__action}>Explore</a>
-        </Link>
+              <div className={styles.card__footer}>
+                <Link href={getHref()} as={getNavigationLink(info.slug)}>
+                  <a className={styles.card__action}>Explore</a>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    
   );
 };
 

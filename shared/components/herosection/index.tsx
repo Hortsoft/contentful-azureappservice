@@ -4,7 +4,7 @@ import Link from 'next/link';
 
   const HeroSection = () => (
       <div>
-        <div className="jumbotron text-white bg-gradient-to-r from-green-400 via-yellow-500 to-orange-700 m-4">
+        <div className="max-w-screen-lg jumbotron shadow-2xl  text-white bg-gradient-to-r from-green-400 via-yellow-500 to-orange-700 py-12 mt-4">
             <h1 className="text-3xl leading-9 font-bold tracking-tight text-white sm:text-4xl sm:leading-10">Jumbotron</h1>
             <div className="mt-8 flex justify-center">
                 <p className="m-4">

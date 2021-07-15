@@ -15,6 +15,7 @@ type Props = {
     slug: string;
   };
 };
+import img from '/public/images/drawers.jpg';
 
 const Card: FunctionComponent<Props> = ({ info }) => {
   const cardBGStyles = {
@@ -22,17 +23,18 @@ const Card: FunctionComponent<Props> = ({ info }) => {
     background: `linear-gradient(45deg, rgba(18, 40, 76, 0.56), rgba(39, 173, 213, 0.56), rgba(79, 192, 176, 0.56)), url(${info.heroImage}) no-repeat`
   };
 
+
+
   return (
     <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
       <article className="overflow-hidden rounded-lg shadow-lg">
-      <div  className="rounded-tr-md rounded-tl-md h-48 w-full">
+      <div className="rounded-tr-md rounded-tl-md h-48 w-full">
         <Image
-          src="/public/images/drawers.jpg"
+          src={img}
           alt=""
-          layout="fixed"
-          width={100}
-          height={100}
+          layout="responsive"
           loading="lazy"
+          height="300px"
         />
         </div>
         <header className="flex items-center justify-between leading-tight p-2 md:p-4">

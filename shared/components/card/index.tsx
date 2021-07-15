@@ -32,6 +32,7 @@ const Card: FunctionComponent<Props> = ({ info }) => {
           layout="fixed"
           width={100}
           height={100}
+          loading="lazy"
         />
         </div>
         <header className="flex items-center justify-between leading-tight p-2 md:p-4">

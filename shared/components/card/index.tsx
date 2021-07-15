@@ -22,7 +22,7 @@ const Card: FunctionComponent<Props> = ({ info }) => {
   };
 
   return (
-    <div className="flex-1 text-gray-700 text-center bg-gray-400 px-5 py-5 m-2 rounded">
+    <div className="flex-none md:flex-1text-gray-700 text-center bg-gray-400 px-5 py-5 m-2 rounded">
       <div className="lg:flex lg:items-center">
         <div className="lg:flex-shrink-0">
           svg

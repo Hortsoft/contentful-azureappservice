@@ -52,13 +52,12 @@ const IndexPage: NextPage<Props, any> = (props: Props) => {
       <Layout metaTags={defaultMetaTags}>
          <Navbar />
          <HeroSection />
-         <div className="container">
-         <div className="p-10 flex flex-wrap overflow-hidden gap-5">
-          <div className="blogposts">
-            <h1 className="blogposts__header">Latest posts</h1>
-               <div className="">{cards(entries)}</div>
-            </div>
-          </div>
+         <div className="container mt-5 mx-auto px-2">
+         <div className="md:flex">
+              <h1 className="blogposts__header">Latest posts</h1>
+                {cards(entries)}
+         </div>
+         
           <div className="sidenav">
             <TagFilters
               tags={tags}

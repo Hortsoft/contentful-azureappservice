@@ -22,25 +22,23 @@ const Card: FunctionComponent<Props> = ({ info }) => {
   };
 
   return (
- 
-          <div className="w-1/3 overflow-hidden">
-            <div className="flex flex-row bg-white shadow-sm rounded p-4">
-            <div className="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-blue-100 text-blue-500">
-              svg 
-          </div>
-          <div className="flex flex-col flex-grow ml-4">
-            <div className="text-sm text-gray-500">{info.title} </div>
-            <div className="font-bold text-lg">{info.description}  </div>
-            
-           
-            
-                <Link href={getHref()} as={getNavigationLink(info.slug)}>
-                  <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Explore</a>
-                </Link>
-              </div>
-            </div>
-          </div>
-   
+    <div className="flex-1 text-gray-700 text-center bg-gray-400 px-5 py-5 m-2 rounded">
+      <div className="lg:flex lg:items-center">
+        <div className="lg:flex-shrink-0">
+          svg
+        </div>
+        <div className="mt-4 lg:mt-0 lg:ml-6">
+          <div className="uppercase tracking-wide text-sm text-indigo-600 font-bold">{info.title} </div>
+          <div className="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">{info.description} </div>
+
+          <Link href={getHref()} as={getNavigationLink(info.slug)}>
+            <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              Explore
+            </a>
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 };
 

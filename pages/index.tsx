@@ -53,7 +53,7 @@ const IndexPage: NextPage<Props, any> = (props: Props) => {
          <Navbar />
          <HeroSection />
          <div className="container mt-5 mx-auto px-2">
-         <div className="md:flex">
+         <div className="flex">
             
                 {cards(entries)}
          </div>

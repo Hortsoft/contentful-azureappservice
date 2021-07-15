@@ -4,6 +4,11 @@ const Dotenv = require('dotenv-webpack');
 const { generateAllArticles } = require('./utils/helpers');
 
 const next_config = {
+  images: {
+    domains: ['https://ambitious-bush-090934910-5.centralus.azurestaticapps.net/', 'http://localhost:3000/', 'https://ambitious-bush-090934910.centralus.azurestaticapps.net/'],
+    loader: 'imgix',
+    path: '',
+  },
   webpack: config => {
     config.plugins = config.plugins || [];
 
@@ -15,7 +20,7 @@ const next_config = {
         systemvars: true
       })
     ];
-
+   
     return config;
   },
 

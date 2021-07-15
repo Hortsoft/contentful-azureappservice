@@ -27,7 +27,7 @@ const Card: FunctionComponent<Props> = ({ info }) => {
       <article className="overflow-hidden rounded-lg shadow-lg">
       <div  className="rounded-tr-md rounded-tl-md h-48 w-full">
         <Image
-          src={cardBGStyles.backgroundImage}
+          src="/public/images/drawers.jpg"
           alt=""
           layout="fixed"
           width={100}

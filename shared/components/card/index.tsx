@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { getHref, getNavigationLink } from '../../helpers/helper';
 
@@ -24,7 +25,15 @@ const Card: FunctionComponent<Props> = ({ info }) => {
   return (
     <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
       <article className="overflow-hidden rounded-lg shadow-lg">
-        <a href="#">Image</a>
+      <div  className="rounded-tr-md rounded-tl-md h-48 w-full">
+        <Image
+          src={cardBGStyles.backgroundImage}
+          alt=""
+          layout="fixed"
+          width={100}
+          height={100}
+        />
+        </div>
         <header className="flex items-center justify-between leading-tight p-2 md:p-4">
           <h1 className="text-lg">
             <a className="no-underline hover:underline text-black" href="#">

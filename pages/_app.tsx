@@ -2,6 +2,8 @@
 import App from 'next/app';
 import React from 'react';
 import Router from 'next/router';
+
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import '../styles/globals.css'
 
 import {trackPageView} from '../core/gtag';

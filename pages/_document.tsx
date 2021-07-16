@@ -50,7 +50,7 @@ class myDocument extends Document<Props> {
             </Fragment>
           )}
         </Head>
-        <body>
+        <body className="text-blueGray-700 antialiased">
           <Main />
           <NextScript />
         </body>

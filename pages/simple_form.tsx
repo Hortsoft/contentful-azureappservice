@@ -30,7 +30,7 @@ export const TheForm = () => {
           <div  className="flex flex-col-5 mb-8  ">
           <label className="mb-2 uppercase font-bold text-lg text-grey-darkest md:ml-2"  >Text:</label>  
        
-            <JoditEditor value="hi" />
+            <JoditEditor value="hi all" />
           </div>
        
           <div  className="flex flex-col mb-4  ">   

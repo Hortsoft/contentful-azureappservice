@@ -1,6 +1,6 @@
 import React from "react";
 
-
+/**
 import 'jodit';
 import 'jodit/build/jodit.min.css';
 
@@ -16,9 +16,9 @@ class Jodit_Editor extends JoditEditor  {
   updateContent = (value) => {
     this.setState({content:value})
 }
-   /**
+   
      * @property Jodit jodit instance of native Jodit
-     */
+    
 	jodit;
 	setRef = jodit => this.jodit = jodit;
 	
@@ -34,4 +34,4 @@ class Jodit_Editor extends JoditEditor  {
             />
         );
     }
-}
+} */

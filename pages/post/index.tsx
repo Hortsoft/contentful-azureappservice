@@ -34,7 +34,7 @@ type Props = {
     return (
       <Layout metaTags={postMetaTags}>
          <Navbar />
-        <div className="post-container" id="post-container">
+        <div className="profile-page" id="post-container">
           <div className="post-header">
             <h1>{props.article.title}</h1>
             <div className="author">

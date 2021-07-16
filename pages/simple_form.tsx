@@ -4,7 +4,8 @@ import { defaultMetaTags } from '../core/constants';
 import {Navbar} from '../shared/components/navbar';
 import Layout from '../shared/components/layout/layout.component';
 import { Footer } from '../shared/components/footer';
-
+import JoditEditor from 'jodit-react';
+ 
 
  
 
@@ -22,6 +23,9 @@ export const TheForm = () => {
       <Navbar />
       <div className="p-8 justify-center items-center h-screen flex">
         <form className="flex" action="">
+       <JoditEditor
+       value="hi"
+       />
           <input
             type="text"
             className="bg-gray-200 shadow-inner rounded-l p-2 flex-1"

@@ -12,7 +12,7 @@ export const TheReactPlayer = () => {
     <div  >
       <Navbar />
       <div className="  p-8 justify-center items-center h-screen-800 flex">
-        <ReactPlayer url="https://www.youtube.com/watch?v=ysz5S6PUM-U" />
+        <ReactPlayer url="https://vimeo.com/537229577" />
       </div>
       <Footer />
     </div>

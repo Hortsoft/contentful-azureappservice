@@ -25,54 +25,32 @@ export const TheForm = () => {
             Sign Up
           </h1>
           <form className="mb-6" action="">
-            <div className="flex flex-col-5 mb-8  ">
-              <label className="mb-2 uppercase font-bold text-lg text-grey-darkest md:ml-2">
+          
+<div className="relative flex w-full flex-wrap items-stretch mb-3">
+  <input type="text" placeholder="Small Input" className="px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative   bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:shadow-outline w-full pr-10"/>
+  <span className="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300  first: bg-transparent rounded text-base items-center justify-center w-8 right-0 pr-2 py-1">
+    <i className="fas fa-user"></i>
+  </span>
+</div>
+ 
+<div className="relative flex w-full flex-wrap items-stretch mb-3">
+<input type="text" placeholder="Regular Input" className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative  bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:shadow-outline w-full pr-10"/>
+  <span className="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300   bg-transparent rounded text-base items-center justify-center w-8 right-0 pr-3 py-3">
+    <i className="fas fa-user"></i>
+  </span>  <label className="mb-2 uppercase font-bold text-lg text-grey-darkest md:ml-2">
                 First Name:
               </label>
-
-              <input
-                type="text"
-                className="bg-gray-200 shadow-inner rounded-l p-2 flex-1"
-                id="email"
-                aria-label="First Name:"
-                placeholder="First Name:"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-              />
-            </div>
-            <div className="flex flex-col-5 mb-8  ">
-              <label className="mb-2 uppercase font-bold text-lg text-grey-darkest md:ml-2">
-                Last name:
-              </label>
-
-              <input
-                type="text"
-                className="bg-gray-200 shadow-inner rounded-l p-2 flex-1"
-                id="email"
-                aria-label="Last name"
-                placeholder="Last name"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-              />
-            </div>
-
-            <div className="flex flex-col mb-4  ">
-            <label className="mb-2 uppercase font-bold text-lg text-grey-darkest md:ml-2">
-            email address:
-              </label>
-              <input
-                type="text"
-                className="bg-gray-200 shadow-inner rounded-l p-2 flex-1"
-                id="email"
-                aria-label="email address"
-                placeholder="Enter your email address"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-              />
-            </div>
+</div>
+ 
+<div className="relative flex w-full flex-wrap items-stretch mb-3">
+  <input type="text" placeholder="Large Input" className="px-3 py-4 placeholder-blueGray-300 text-blueGray-600 relative   bg-white rounded text-base border border-blueGray-300 outline-none focus:outline-none focus:shadow-outline w-full pr-10"/>
+  <span className="z-10 h-full leading-normal font-normal absolute text-center text-blueGray-300   bg-transparent rounded text-lg items-center justify-center w-8 right-0 pr-3 py-4">
+    <i className="fas fa-user"></i>
+  </span>
+</div> 
             <div className="flex flex-col mb-4 md:w-1/2">
               <button
-                className="bg-blue-600 hover:bg-blue-700 duration-300 text-white shadow p-2 rounded-r"
+                 className="text-blueGray-500 bg-transparent border border-solid border-blueGray-500 hover:bg-blueGray-500 hover:text-white active:bg-blueGray-600 font-bold uppercase text-sm px-6 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                 type="submit"
                 onClick={subscribe}
               >

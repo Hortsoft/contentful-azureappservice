@@ -21,30 +21,41 @@ export const TheForm = () => {
   return (
     <div>
       <Navbar />
-      <div className="p-8 justify-center items-center h-screen flex">
-        <form className="flex" action="">
-       <JoditEditor
-       value="hi"
-       />
-          <input
-            type="text"
-            className="bg-gray-200 shadow-inner rounded-l p-2 flex-1"
-            id="email" 
-            aria-label="email address"
-            placeholder="Enter your email address"
-            value={input}
-            onChange={e => setInput(e.target.value)}
-          />
-          <button
-            className="bg-blue-600 hover:bg-blue-700 duration-300 text-white shadow p-2 rounded-r"
-            type="submit"
-            onClick={subscribe}
-          >
-            Sign Up
-          </button>
+      <div className="flex items-center h-screen w-full bg-teal-lighter">
+  <div className="w-full bg-white rounded shadow-lg p-4 m-4 md:max-w-md md:mx-auto">
+  <h1 className="block w-full text-center text-grey-darkest mb-6">Sign Up</h1>
+        <form  className="mb-6" action="">
+        
+           
+          <div  className="flex flex-col-5 mb-8  ">
+          <label className="mb-2 uppercase font-bold text-lg text-grey-darkest md:ml-2"  >Text:</label>  
+       
+            <JoditEditor value="hi" />{" "}
+          </div>
+       
+          <div  className="flex flex-col mb-4  ">   
+              <input
+              type="text"
+              className="bg-gray-200 shadow-inner rounded-l p-2 flex-1"
+              id="email"
+              aria-label="email address"
+              placeholder="Enter your email address"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+            />{" "}
+          </div>
+          <div  className="flex flex-col mb-4 md:w-1/2">
+            <button
+              className="bg-blue-600 hover:bg-blue-700 duration-300 text-white shadow p-2 rounded-r"
+              type="submit"
+              onClick={subscribe}
+            >
+              Sign Up
+            </button>
+          </div>
         </form>
       </div>
-
+      </div>
       <Footer />
     </div>
   );

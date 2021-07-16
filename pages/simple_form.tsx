@@ -30,7 +30,7 @@ export const TheForm = () => {
           <div  className="flex flex-col-5 mb-8  ">
           <label className="mb-2 uppercase font-bold text-lg text-grey-darkest md:ml-2"  >Text:</label>  
        
-            <JoditEditor value="hi" />{" "}
+            <JoditEditor value="hi" />
           </div>
        
           <div  className="flex flex-col mb-4  ">   
@@ -42,7 +42,7 @@ export const TheForm = () => {
               placeholder="Enter your email address"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-            />{" "}
+            />
           </div>
           <div  className="flex flex-col mb-4 md:w-1/2">
             <button

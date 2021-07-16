@@ -3,6 +3,7 @@ import React from "react";
 
 import 'jodit';
 import 'jodit/build/jodit.min.css';
+
 import JoditEditor from "jodit-react";
 
 class Jodit_Editor extends JoditEditor  {

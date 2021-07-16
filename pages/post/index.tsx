@@ -33,20 +33,30 @@ type Props = {
   
     return (
       <Layout metaTags={postMetaTags}>
-         <Navbar />
-        <div className="post-container" id="post-container">
-          <div className="post-header">
-            <h1>{props.article.title}</h1>
-            <div className="author">
-              <p>Written by {props.article.author.name}</p>
+        <Navbar />
+        <div className="container px-4 mx-auto">
+          <div className="flex flex-wrap">
+            <div className="w-full px-2 md:w-7/12">
+              <span className="text-sm block my-4 p-3 text-blueGray-700 rounded border border-solid border-blueGray-100">
+                <h3 className="text-4xl font-normal leading-normal mt-0 mb-2 text-blueGray-800">
+                  {props.article.title}
+                </h3>
+                <p className="text-base font-light leading-relaxed mt-0 mb-4 text-blueGray-800">
+                  {props.article.body}
+                </p>
+                <footer className="block text-blueGray-600">
+                  Written by {props.article.author.name}
+                </footer>
+              </span>
+            </div>
+            <div className="w-1/2 px-2 md:w-5/12">
+              <span className="text-sm block my-2 p-1 text-blueGray-700 rounded border border-solid border-blueGray-100">
+                {renderCards(props.suggestedArticles)}
+              </span>
             </div>
           </div>
-          <div className="markdown">
-              <p>{props.article.body}</p>
-          </div>
-      
         </div>
-        <div className="suggestions">{renderCards(props.suggestedArticles)}</div>
+
         <Footer />
       </Layout>
     );

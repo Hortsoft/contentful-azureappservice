@@ -36,7 +36,7 @@ type Props = {
         <Navbar />
         <div className="container px-4 mx-auto">
           <div className="flex flex-wrap">
-            <div className="w-full px-4 md:w-8/12">
+            <div className="w-full px-2 md:w-7/12">
               <span className="text-sm block my-4 p-3 text-blueGray-700 rounded border border-solid border-blueGray-100">
                 <h3 className="text-4xl font-normal leading-normal mt-0 mb-2 text-blueGray-800">
                   {props.article.title}
@@ -49,8 +49,8 @@ type Props = {
                 </footer>
               </span>
             </div>
-            <div className="w-1/2 px-4 md:w-4/12">
-              <span className="text-sm block my-4 p-3 text-blueGray-700 rounded border border-solid border-blueGray-100">
+            <div className="w-1/2 px-2 md:w-5/12">
+              <span className="text-sm block my-2 p-1 text-blueGray-700 rounded border border-solid border-blueGray-100">
                 {renderCards(props.suggestedArticles)}
               </span>
             </div>

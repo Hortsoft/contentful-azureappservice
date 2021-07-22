@@ -26,18 +26,16 @@ jobs:
           start: npm start
           config: pageLoadTimeout=100000,baseUrl=http://localhost:3000
 
-      - uses: actions/upload-artifact@v1
-          if: always()
-          with:
-            name: cypress-videos
-            path: cypress/videos
-            name: cypress-screenshots
-            path: cypress/screenshots
-          
+        uses: actions/upload-artifact@v2-preview
+        with:
+          name: cypress-videos
+          path: cypress/videos
+          name: cypress-screenshots
+          path: cypress/screenshots/* # or maybe cypress/**/*   
 
         env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
-        # pass the Dashboard record key as an environment variable
+          # pass the Dashboard record key as an environment variable
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           # pass GitHub token to allow accurately detecting a build vs a re-run build
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

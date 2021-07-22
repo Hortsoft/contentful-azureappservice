@@ -24,9 +24,17 @@ jobs:
           record: true
           build: npm run build
           start: npm start
-          record: true 
           config: pageLoadTimeout=100000,baseUrl=http://localhost:3000
-        
+
+      - uses: actions/upload-artifact@v1
+          if: always()
+          with:
+            name: cypress-videos
+            path: cypress/videos
+            name: cypress-screenshots
+            path: cypress/screenshots
+          
+
         env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         # pass the Dashboard record key as an environment variable

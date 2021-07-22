@@ -1,0 +1,43 @@
+name: End-to-end tests
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: log untrusted output
+        run: |
+
+          # disable command workflow processing
+          echo "::stop-commands::`echo -n ${{ github.token }} | sha256sum | head -c 64`"
+
+          # log untrusted output
+          echo "untrusted output"
+
+          # enable workflow command processing
+          echo "::`echo -n ${{ github.token }} | sha256sum | head -c 64`::"
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v1
+        with:
+          record: true
+          build: npm run build
+          start: npm start
+          config: pageLoadTimeout=100000,baseUrl=http://localhost:3000
+
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+          # pass the Dashboard record key as an environment variable
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          # pass GitHub token to allow accurately detecting a build vs a re-run build
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - uses: actions/upload-artifact@v2-preview
+        with:
+          name: cypress-videos
+          path: cypress/videos
+          name2: cypress-screenshots
+          path2: cypress/screenshots/* # or maybe cypress/**/*   
+
+

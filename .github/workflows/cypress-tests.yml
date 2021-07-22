@@ -24,6 +24,7 @@ jobs:
           record: true
           build: npm run build
           start: npm start
+          record: true 
           config: pageLoadTimeout=100000,baseUrl=http://localhost:3000
         
         env:

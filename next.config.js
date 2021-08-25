@@ -7,7 +7,7 @@ const { generateAllArticles } = require('./utils/helpers');
 const next_config = {
   images: {
     loader: 'imgix',
-    path: '',
+    path: 'https://contentful-webapp.azurewebsites.net/',
   },
   webpack: config => {
     config.plugins = config.plugins || [];

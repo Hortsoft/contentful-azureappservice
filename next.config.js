@@ -3,9 +3,9 @@ const path = require('path');
 const Dotenv = require('dotenv-webpack');
 const { generateAllArticles } = require('./utils/helpers');
 
+//domains: ['https://contentful-webapp.azurewebsites.net/', 'http://localhost:3000/'],
 const next_config = {
   images: {
-    domains: ['https://contentful-webapp.azurewebsites.net/', 'http://localhost:3000/'],
     loader: 'imgix',
     path: '',
   },

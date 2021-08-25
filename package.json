@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@types/node": "^15.12.5",
-    "@types/react": "^17.0.11",
+    "@types/react": "^17.0.19",
     "autoprefixer": "^10.2.6",
     "contentful-cli": "^1.8.7",
     "contentful-migration": "^4.2.1",

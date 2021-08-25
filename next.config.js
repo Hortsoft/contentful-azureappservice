@@ -5,7 +5,7 @@ const { generateAllArticles } = require('./utils/helpers');
 
 const next_config = {
   images: {
-    domains: ['https://contentful-webapp.azurewebsites.net', 'http://localhost:3000/'],
+    domains: ['https://contentful-webapp.azurewebsites.net/', 'http://localhost:3000/'],
     loader: 'imgix',
     path: '',
   },

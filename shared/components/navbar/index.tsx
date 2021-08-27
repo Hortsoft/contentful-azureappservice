@@ -11,7 +11,7 @@ export const Navbar = () => {
   };
     return (
       <>
-         <nav className='flex items-center flex-wrap bg-green-400 p-3 '>
+         <nav className='flex items-center flex-wrap bg-White p-3 '>
         <Link href='/'>
           <a className='inline-flex items-center p-2 mr-4 '>
             <svg
@@ -52,31 +52,36 @@ export const Navbar = () => {
           }   w-full lg:inline-flex lg:flex-grow lg:w-auto`}
         >
           <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'>
-            <Link href='/'>
-              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white '>
-                Home
-              </a>
-            </Link>
+          <Link href="/">
+              <a  className="text-sbtBlue border-b-4 border-transparent hover:border-sbtOrange hover:text-sbtOrange px-3 py-2 text-xl font-medium  ">Home</a>
+             </Link>
+          
             <Link href='/simple_form'>
-              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white'>
+            <a  className="text-sbtBlue border-transparent border-b-4 hover:border-sbtOrange hover:text-sbtOrange px-3 py-2 text-xl font-medium  ">
                 Simple  form
               </a>
             </Link>
             <Link href='/react_player'>
-              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white'>
+                <a  className="text-sbtBlue border-transparent border-b-4 hover:border-sbtOrange hover:text-sbtOrange px-3 py-2 text-xl font-medium  ">
                 React Player
               </a>
             </Link>
             <Link href='/'>
-              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white'>
+            <a  className="text-sbtBlue border-transparent border-b-4 hover:border-sbtOrange hover:text-sbtOrange px-3 py-2 text-xl font-medium  ">
                 Contact us
               </a>
             </Link>
-            
+            <Link href='https://canvas.instructure.com/login/canvas' >
+            <a  className="text-sbtBlue border-transparent border-b-4 hover:border-sbtOrange hover:text-sbtOrange px-3 py-2 text-xl font-medium  ">
+                Canvas Login
+              </a>
+            </Link>
+          
           </div>
           <div className="relative group">
-      <button className="flex flex-row lg:w-auto  px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white md:w-auto md:inline md:mt-0 md:ml-4 focus:outline-none" >
-          <span>First Dropdown</span>
+      <button className="flex flex-row lg:w-auto  px-3 py-2 rounded  items-center justify-center   text-sbtBlue border-transparent border-b-4 hover:border-sbtOrange hover:text-sbtOrange px-3 py-2 text-xl font-medium  md:w-auto md:inline md:mt-0 md:ml-4 focus:outline-none" >
+        <span> dropdown</span>
+              
       </button>
       <div className="absolute z-10 hidden bg-grey-200 group-hover:block">
           
@@ -91,7 +96,7 @@ export const Navbar = () => {
   </div>  
   
   <div className="relative group">
-      <button className="flex flex-row lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white md:w-auto md:inline md:mt-0 md:ml-4 focus:outline-none">
+      <button className="flex flex-row lg:w-auto w-full px-3 py-2 rounded   items-center justify-center  text-sbtBlue border-transparent border-b-4 hover:border-sbtOrange hover:text-sbtOrange px-3 py-2 text-xl font-medium  md:w-auto md:inline md:mt-0 md:ml-4 focus:outline-none">
           <span>Second Dropdown</span>
       </button>
       <div className="absolute z-10 hidden bg-grey-200 group-hover:block">

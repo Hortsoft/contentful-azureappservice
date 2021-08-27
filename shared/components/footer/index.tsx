@@ -1,73 +1,101 @@
 import React, { FunctionComponent } from 'react';
 import Link from 'next/link';
-import { getHref, getNavigationLink } from '../../helpers/helper';
-
+import { getHref, getNavigationLink } from '../../helpers/helper'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTwitter } from "@fortawesome/free-brands-svg-icons"; 
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons"; 
+import { faFacebook } from "@fortawesome/free-brands-svg-icons"; 
 
 export const Footer = () => {
     return (
-      <>
-         
-<section className="pb-10 mt-6 bg-gray-200">
-    <div className="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
-        <nav className="flex flex-wrap justify-center -mx-5 -my-2">
-            <div className="px-5 py-2">
-                <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                    About
-                </a>
+      <div>
+        <footer className="pb-10 mt-6 bg-gray-200">
+          <div className="container px-5 py-24 mx-auto">
+            <div className="flex flex-wrap md:text-left text-center order-first">
+              <div className="lg:w-1/3 md:w-1/2 w-full px-4">
+                <h2 className="text-2xl font-bold">Quick links</h2>
+                <nav className="list-none mb-10">
+                  <li>
+                    {" "}
+                    <Link href="/">
+                    <a className="text-xl text-gray-600 hover:text-bold hover:text-sbtOrange hover:underline">First Link</a>
+                    </Link>
+                  </li>
+                  <li>
+                    {" "}
+                    <Link href="/">
+                    <a className="text-xl text-gray-600 hover:text-bold hover:text-sbtOrange hover:underline">Second Link</a>
+                    </Link>
+                  </li>
+                  <li>
+                    {" "}
+                    <Link href="/">
+                    <a className="text-xl text-gray-600 hover:text-bold hover:text-sbtOrange hover:underline">Third green</a>
+                    </Link>
+                  </li>
+                  
+                </nav>
+              </div>
+
+              <div className="lg:w-1/3 md:w-1/2 w-full px-4">
+                    <h2 className="text-2xl font-bold">Find us at</h2>
+                <div className="inline-grid grid-cols-3 gap-x-3 m-2">
+                  <div className="gap-px">  
+                    <Link href="/">
+                      <a className="text-gray-600 hover:text-orange-900 text-xl">
+                        <FontAwesomeIcon icon={faTwitter} />   
+                      </a>
+                    </Link>
+                  </div>
+                  <div className="gap-px">   
+                    <Link href="/">
+                    <a className="text-gray-600 hover:text-orange-900 text-xl">
+                      <FontAwesomeIcon icon={faLinkedin} /> 
+                      </a>
+                    </Link>
+                  </div>
+                  <div className="gap-px"> 
+                    <Link href="/">
+                    <a className="text-gray-600 hover:text-orange-900 text-xl">
+                      <FontAwesomeIcon icon={faFacebook} /> 
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="lg:w-1/3 md:w-1/2 w-full px-4">
+              <h2 className="text-2xl font-bold">
+                  Subscribe to the Newsletter
+                </h2>
+                <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
+                  <div className="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
+                    <form>
+                      <label className="leading-7 text-sm text-gray-600">
+                        Name
+                      </label>
+
+                      <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        autoComplete="name"
+                        required
+                        className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                      />
+                      <button
+                        className="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
+                        type="submit"
+                      >
+                        Register
+                      </button>
+                    </form>
+                  </div>
+              
+                </div>
+              </div>
             </div>
-            <div className="px-5 py-2">
-                <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                    Blog
-                </a>
-            </div>
-            <div className="px-5 py-2">
-                <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                    Team
-                </a>
-            </div>
-            <div className="px-5 py-2">
-                <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                    Pricing
-                </a>
-            </div>
-            <div className="px-5 py-2">
-                <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                    Contact
-                </a>
-            </div>
-            <div className="px-5 py-2">
-                <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                    Terms
-                </a>
-            </div>
-        </nav>
-        <div className="flex justify-center mt-8 space-x-6">
-            <a href="#" className="text-gray-400 hover:text-gray-500">
-                <span className="sr-only">Facebook</span>
-               
-            </a>
-            <a href="#" className="text-gray-400 hover:text-gray-500">
-                <span className="sr-only">Instagram</span>
-               
-            </a>
-            <a href="#" className="text-gray-400 hover:text-gray-500">
-                <span className="sr-only">Twitter</span>
-               
-            </a>
-            <a href="#" className="text-gray-400 hover:text-gray-500">
-                <span className="sr-only">GitHub</span>
-               
-            </a>
-            <a href="#" className="text-gray-400 hover:text-gray-500">
-                <span className="sr-only">Dribbble</span>
-                
-            </a>
-        </div>
-        <p className="mt-8 text-base leading-6 text-center text-gray-400">
-            © 2021 SomeCompany, Inc. All rights reserved.
-        </p>
-    </div>
-</section>
-      </>
+          </div>
+        </footer>
+      </div>
     );
   };

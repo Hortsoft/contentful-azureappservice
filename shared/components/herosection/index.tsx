@@ -1,25 +1,34 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image'
+import heroPic from '/public/images/drawers.jpg'
  
 
   const HeroSection = () => (
-      <div>
-        <div className="jumbotron shadow-2xl  text-white bg-gradient-to-r from-green-400 via-yellow-500 to-orange-700 py-12 mt-4">
+    <div>
+      <div className=" flex    jumbotron shadow-2xl  text-white bg-gradient-to-r  from-sbtBlue   to-sbtOrange p-12 mt-4 text-left">
+        <div className="space-y-6">
+          <div>
             <h1 className="text-3xl leading-9 font-bold tracking-tight text-white sm:text-4xl sm:leading-10 justify-center">
-                Jumbotron
-                </h1>
-            <div className="mt-8 flex justify-center">
-                <p className="m-4">
-                    What shall we say. Gradient
-                </p>
-
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    Learn more
-                </button> 
-            </div>
+              Jumbotron
+            </h1>
+          </div>
+          <div>What shall we say. Gradient</div>
+          <div>
+            <button
+              className=" text-sbtOrange bg-sbtBlue border border-solid border-sbtOrange hover:bg-sbtOrange hover:text-white active:bg-sbtOrange font-normal w-40  text-xl px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1   ease-linear transition-all duration-150"
+              type="button"
+            >
+              Learn more
+            </button>
+          </div>
         </div>
-        </div>
-    
+        <div className="ml-auto w-12">
+        <Image src={heroPic} alt="blue door" className="float-right" />
+      </div>
+      </div>
+      
+    </div>
   );
    
   

@@ -3,7 +3,10 @@ import App from 'next/app';
 import React from 'react';
 import Router from 'next/router';
 
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
+
 import '../styles/globals.css'
 
 import {trackPageView} from '../core/gtag';

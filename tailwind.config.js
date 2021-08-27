@@ -7,9 +7,18 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
+      sbtOrange: {
+        DEFAULT: '#F79423', 
+      },
+      sbtBlue: {
+        DEFAULT: '#003A5D', 
+      }, 
       ...colors,
     },
     extend: {
+      backgroundImage: theme => ({
+        'hero-pattern': "url('/images/blue-door.jpg')", 
+      }),
       minHeight: {
         "screen-75": "75vh",
       },
@@ -83,6 +92,15 @@ module.exports = {
     "disabled",
   ],
   plugins: [
+    function ({addUtilities}) {
+      const extendUnderline = {
+          '.underline': {
+              'textDecoration': 'underline',
+              'text-decoration-color': 'sbtOrange',
+          },
+      }
+      addUtilities(extendUnderline)
+  },
     require("@tailwindcss/forms"),
     plugin(function ({ addComponents, theme }) {
       const screens = theme("screens", {});
